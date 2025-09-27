@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Checkout-Kata/v17
+/Rules/Checkout.Kata.Rules/obj
+/Rules/Checkout.Kata.Rules/bin/Debug/net9.0
+/ServiceInterfaces/Checkout.Kata.ServiceInterfaces/bin/Debug/net9.0
+/ServiceInterfaces/Checkout.Kata.ServiceInterfaces/obj
+/Services/Checkout.Kata.Services/obj
+/UnitTest/Checkout.Kata.UnitTest/bin/Debug/net9.0
+/Services/Checkout.Kata.Services/bin/Debug/net9.0
+/UnitTest/Checkout.Kata.UnitTest/obj
+/.vs/Checkout-Kata
