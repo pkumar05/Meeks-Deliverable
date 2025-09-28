@@ -22,25 +22,26 @@ namespace Checkout.Kata.UnitTest
         }
 
         [Test]
-        public void CalculateTotalFor_NoSpecials_ReturnsUnitTimesQty()
+        public void For_NoSpecials_ReturnsUnitTimesQty()
         {
             var svc = new DefaultPricing(DefaultRules);
-            Assert.Equals(20 * 3, svc.CalculateTotalFor('C', 3));
+            Assert.That(20*3, Is.EqualTo(svc.CalculateTotalFor("C", 3)));
         }
 
         [Test]
-        public void CalculateTotalFor_AppliesSpecialPrice()
+        public void For_AppliesSpecialPrice()
         {
             var svc = new DefaultPricing(DefaultRules);
-            Assert.Equals(130, svc.CalculateTotalFor('A', 3));
-            Assert.Equals(130 + 50, svc.CalculateTotalFor('A', 4));
+            Assert.That(130, Is.EqualTo(svc.CalculateTotalFor("A", 3)));
+            Assert.That(130 + 50, Is.EqualTo(svc.CalculateTotalFor("A", 4)));
         }
 
         [Test]
-        public void CalculateTotalFor_UnknownSKU_Throws()
+        public void For_UnknownSKU_Throws()
         {
             var svc = new DefaultPricing(DefaultRules);
-            Assert.Throws<ArgumentException>(() => svc.CalculateTotalFor('X', 1));
+            Assert.Throws<KeyNotFoundException>(() => svc.CalculateTotalFor("X", 1));
+            
         }
 
     }

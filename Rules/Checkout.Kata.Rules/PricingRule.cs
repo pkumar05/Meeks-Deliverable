@@ -17,6 +17,12 @@
             SpecialQuantity = specialQuantity;
             SpecialPrice = specialPrice;
 
+            if ((specialQuantity.HasValue && !specialPrice.HasValue) || (!specialQuantity.HasValue && specialPrice.HasValue))
+                throw new ArgumentException("Both special quantity and special price needs to provide together.");
+
+            if (specialQuantity.HasValue && specialQuantity.Value <= 0)
+                throw new ArgumentException("Special Quantity must be greater than 0");
+
         }
     }
 }

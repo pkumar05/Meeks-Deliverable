@@ -2,6 +2,6 @@
 {
     public interface IPricing
     {
-        int CalculateTotalFor(char sku, int quantity);
+        int CalculateTotalFor(string sku, int quantity);
     }
 }
